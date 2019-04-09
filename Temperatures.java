@@ -3,6 +3,8 @@ class Temperatures {
 
     public static void main(String[] args) {
 
+        System.out.println("The data provided are:");
+
         int grid[][] = {
                 {68, 70, 76, 70, 68, 71, 75},
                 {76, 76, 87, 84, 82, 75, 83},
@@ -30,27 +32,46 @@ class Temperatures {
 
         }
 
-        System.out.println();
-
         //Average temperature per day.
-        System.out.println("The average temperature for Sunday is 70.25.");
-        System.out.println("The average temperature for Monday is 70.75.");
-        System.out.println("The average temperature for Tuesday is 78.25.");
-        System.out.println("The average temperature for Wednesday is 75.");
-        System.out.println("The average temperature for Thursday is 74.");
-        System.out.println("The average temperature for Friday is 73.25.");
-        System.out.println("The average temperature for Saturday is 76.75.");
+
+        int AverageSunday = (68+76+73+64)/4;
+        int AverageMonday = (70+76+72+65)/4;
+        int AverageTuesday = (76+87+81+69)/4;
+        int AverageWednesday = (70+84+78+68)/4;
+        int AverageThursday = (68+82+76+70)/4;
+        int AverageFriday = (71+75+73+74)/4;
+        int AverageSaturday = (75+83+77+72)/4;
+
+        System.out.println();
+        System.out.println("Based on that data, the following are the average temperatures for the week.");
+        System.out.println("Sun: " + (AverageSunday));
+        System.out.println("Mon: " + (AverageMonday));
+        System.out.println("Tue: " + (AverageTuesday));
+        System.out.println("Wed: " + (AverageWednesday));
+        System.out.println("Thu: " + (AverageThursday));
+        System.out.println("Fri: " + (AverageFriday));
+        System.out.println("Sat: " + (AverageSaturday));
         System.out.println();
 
         //Avereage temperature per time.
-        System.out.println("The average temperature at 7AM is 71.14.");
-        System.out.println("The average temperature at 3PM is 80.43.");
-        System.out.println("The average temperature at 7PM is 75.71.");
-        System.out.println("The average temperature at 3AM is 68.86.");
+
+        int Average7AM = (68+70+76+70+68+71+75)/7;
+        int Average3PM = (76+76+87+84+82+75+83)/7;
+        int Average7PM = (73+72+81+78+76+73+77)/7;
+        int Average3AM = (64+65+69+68+70+74+72)/7;
+
+        System.out.println("7 AM: " + (Average7AM));
+        System.out.println("3 PM: " + (Average3PM));
+        System.out.println("7 PM: " + (Average7PM));
+        System.out.println("3 AM: " + (Average3AM));
         System.out.println();
 
         //Average temperature overall.
-        System.out.println("The average temperature overall is 74.04.");
+
+        int AverageTempOverall = (68+76+73+64+70+76+72+65+76+87+81+69+70+84+78+68+68+82+76+70+71+75+73+74+75+83+77+72)/28;
+
+        System.out.println("The final average temperature for the week was: ");
+        System.out.println("Overall: " + (AverageTempOverall));
 }
 
 }
