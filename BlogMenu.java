@@ -55,7 +55,8 @@ do{
         switch (selection){
             case 1:
                 DisplayGenerator displayGenerator = new DisplayGenerator();
-                Post post = displayGenerator.generatePost();
+                Post newPost = displayGenerator.generatePost();
+                postLog.add(newPost);
                 break;
             case 2:
                 viewPosts();

@@ -1,6 +1,6 @@
 public class Post {
 
-    private static int userPostCount = 1;
+    private static int userPostCount = 0;
     private int id;
     private User user;
     private String userPostTitle;
@@ -8,7 +8,13 @@ public class Post {
     private String webAddress;
     private boolean closed;
 
-    public Post(String User, String userPostTitle, String userPost) {
+    public Post() {
+
+        userPostCount++;
+        this.id = userPostCount;
+    }
+
+    public Post(User user, int id, String userPost) {
 
         userPostCount++;
         this.user = user;
@@ -16,12 +22,6 @@ public class Post {
         this.userPostTitle = userPostTitle;
         this.userPost = userPost;
         this.closed = false;
-    }
-
-    public Post() {
-
-        userPostCount++;
-        this.id = userPostCount;
     }
 
     public Post(User user, String userPost, String webAddress) {
@@ -73,12 +73,10 @@ public class Post {
 
     public String toStringPost() {
 
-        User generateUserObj = new User();
-
         return "Post ID:" + this.id + "\n" +
-                "User: " + this.getUser() + "\n" +
-                "Post: " + this.userPost + "/n" +
-                "Web Address" + this.getWebAddress();
+                "User: " + this.user.getUserUserName()+ "\n" +
+                "Title:" + this.userPostTitle + "/n" +
+                "Post: " + this.userPost;
 
     }
 }
